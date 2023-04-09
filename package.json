@@ -1,8 +1,8 @@
 {
   "name": "theme-toolkit",
-  "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "main": "dist/themeToolkit.js",
+  "module": "dist/themeToolkit.esm.js",
   "scripts": {
     "dev": "vite",
     "build": "rollup -c rollup.config.js",
