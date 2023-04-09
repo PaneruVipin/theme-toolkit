@@ -1,8 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 import "./App.css";
+import Background from "./lib/BackGround";
+import ThemeProvider from "./lib/ThemeProvider";
+import ColorBoxes from "./lib/ColorBoxes";
+import { DarkModeSwitcher } from "./lib/DarkModeSwitcher";
 
-function App() {
-  return <div className=" bg-red-500">hello world</div>;
-}
+export const RTB_Provider = () => {
+  return (
+    <ThemeProvider>
+      <Background>
+        <ColorSwitcher />
+      </Background>
+    </ThemeProvider>
+  );
+};
 
-export default App;
+export const ColorSwitcher = () => {
+  return <ColorBoxes />;
+};
+
+
+export default { RTB_Provider,ColorSwitcher, DarkModeSwitcher};

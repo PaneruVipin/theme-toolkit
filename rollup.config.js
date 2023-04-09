@@ -1,8 +1,8 @@
 import babel from "@rollup/plugin-babel";
-import commonjs from "@rollup/plugin-commonjs";
+// import commonjs from "@rollup/plugin-commonjs";
 import external from "rollup-plugin-peer-deps-external";
 import resolve from "@rollup/plugin-node-resolve";
-import { terser } from "rollup-plugin-terser";
+// import { terser } from "rollup-plugin-terser";
 import postcss from "rollup-plugin-postcss";
 import autoprefixer from "autoprefixer";
 import cssnano from "cssnano";
@@ -29,7 +29,7 @@ export default [
       {
         file: "dist/themeToolkit.js",
         format: "cjs",
-        sourcemap: true
+        sourcemap: true,
       },
       {
         file: "dist/themeToolkit.esm.js",
